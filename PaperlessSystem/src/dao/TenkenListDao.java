@@ -192,7 +192,7 @@ public class TenkenListDao {
 					count+=insertTenkenList(bean, con);
 				} else if (bean.getSvStatus() == update.ordinal()) {
 					count+=updateTenkenList(savekbn==TmpSaved.ordinal() ?
-							  Arrays.asList(new Object[]{bean.getDataVal(),bean.getTenkenNo(),bean.getTantouNm(),bean.getSaveDate(),bean.getSetubiNo(),bean.getSheetNm(),bean.getTagNm()})
+							Arrays.asList(new Object[]{bean.getDataVal(),bean.getTenkenNo(),bean.getTantouNm(),bean.getSaveDate(),bean.getSetubiNo(),bean.getSheetNm(),bean.getTagNm()})
 							: Arrays.asList(new Object[]{bean.getDataVal(),bean.getTenkenNo(),bean.getTantouNm(),bean.getSaveDate(),bean.getSetubiNo(),bean.getSheetNm(),bean.getTagNm(),bean.getTenkenYear(),bean.getTenkenMonth()})
 							, savekbn, con);
 				}
