@@ -107,7 +107,7 @@ public class CommonFunctionServlet extends HttpServlet implements logger {
 				}
 				json = JSONArray.fromObject(list);
 			}
-	        response.getOutputStream().write(json.toString().getBytes("UTF-8"));
+			response.getOutputStream().write(json.toString().getBytes("UTF-8"));
 
 		} catch (Exception e) {
 			logger.warning(e.getLocalizedMessage());
