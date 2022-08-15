@@ -33,7 +33,7 @@ public final class CommonFunctions {
 	 * @author H.Hayashi
 	 *
 	 */
-	 public final class IniFileReader {
+	public final class IniFileReader {
 
 		/** HashMap for the Sections */
 		private HashMap<String, HashMap<String, String>> mSections;
@@ -99,11 +99,11 @@ public final class CommonFunctions {
 		public String[] getAllSections() { ArrayList<String> list = new ArrayList<String>(mSections.keySet()); return list.toArray(new String[list.size()]); }
 	}
 
-	 /**
-	  *
-	  * @param section
-	  * @throws IOException
-	  */
+	/**
+	 *
+	 * @param section
+	 * @throws IOException
+	 */
 	public void getIniFileData(String section) throws IOException {
 		String path = new File(".").getAbsoluteFile().getParent() + "\\setting.ini";
 		IniFileReader reader = new IniFileReader(new File(path));
